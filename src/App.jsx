@@ -18,7 +18,7 @@ console.log(selectedItems);
   const handleSubmit = (event) => {
     event.preventDefault();
 try{
-  fetch('http://localhost:4009/update-items', {
+  fetch('https://bookmyshow-backend.vercel.app/update-items', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ try{
   };
   const [seat, setseat] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4009/bookingroom")
+    fetch("https://bookmyshow-backend.vercel.app/bookingroom")
       .then((data) => data.json())
       .then((mvs) => setseat(mvs));
   }, []);
